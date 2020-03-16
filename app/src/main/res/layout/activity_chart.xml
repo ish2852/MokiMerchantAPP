@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.ChartActivity">
+
+
+    <ImageView
+        android:id="@+id/top_big_background"
+        android:layout_width="450dp"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toTopOf="@+id/chartTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/top_small_background" />
+
+    <ImageView
+        android:id="@+id/orderListImageLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/small_logo" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/termSettingButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/chartTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/small_sales_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.569"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderListImageLogo" />
+
+    <TextView
+        android:id="@+id/startDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="2020-01"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:background="@drawable/date_layout"
+        app:layout_constraintBottom_toTopOf="@+id/chart"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lastDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="2020-02"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:background="@drawable/date_layout"
+        app:layout_constraintBottom_toTopOf="@+id/chart"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/termSettingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/month_button"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/previousDateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/previous_date_button"
+        android:stateListAnimator="@null"
+        app:layout_constraintEnd_toStartOf="@+id/termSettingButton"
+        app:layout_constraintTop_toBottomOf="@+id/chart" />
+
+    <Button
+        android:id="@+id/nextDateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/next_date_button"
+        android:stateListAnimator="@null"
+        app:layout_constraintStart_toEndOf="@+id/termSettingButton"
+        app:layout_constraintTop_toBottomOf="@+id/chart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:background="@drawable/menu_item_layout">
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="135dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="30dp"
+            app:srcCompat="@drawable/moki_store" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="right|center"
+            android:layout_margin="15dp">
+
+            <TextView
+                android:id="@+id/productNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="빅맥"
+                android:textStyle="bold"
+                android:textSize="18dp"  />
+
+            <TextView
+                android:id="@+id/productPriceAndAmountTextView"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:background="@drawable/price_box_layout"
+                android:gravity="center"
+                android:text="3,000원 x 4개"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
