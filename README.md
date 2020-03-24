@@ -1,4 +1,4 @@
-# Noki general App
+# oki general App
 NFC와 FCM를 통해 매장에서 주문하는 키오스크를 App으로 만든 프로젝트 입니다.
 General App, Merchant App, Web Server 총 3개의 프로젝트 중 Merchant App의 Repository입니다.
 
